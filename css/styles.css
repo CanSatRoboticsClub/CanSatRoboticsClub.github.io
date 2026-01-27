@@ -10925,3 +10925,21 @@ footer.footer {
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.vignette-box {
+    /* This creates a soft dark "glow" behind the text */
+    background: radial-gradient(
+        rgba(0, 0, 0, 0.7) 0%, 
+        rgba(0, 0, 0, 0.3) 50%, 
+        transparent 100%
+    );
+    
+    /* Padding is critical so the gradient doesn't cut off abruptly */
+    padding: 4rem 2rem;
+    
+    /* Makes the shape feel more natural behind a sentence */
+    border-radius: 50%; 
+    
+    /* Extra insurance: makes the letters themselves pop */
+    text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+}
