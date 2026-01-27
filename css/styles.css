@@ -10933,8 +10933,7 @@ footer.footer {
         rgba(0, 0, 0, 0.5) 25%, 
         rgba(0, 0, 0, 0.3) 50%, 
         rgba(0, 0, 0, 0.1) 75%, 
-        rgba(0, 0, 0, 0) 90%, 
-        transparent 100%
+        rgba(0, 0, 0, 0.05) 90%, 
     );
     
     /* Padding is critical so the gradient doesn't cut off abruptly */
