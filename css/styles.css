@@ -10917,3 +10917,11 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.glass-panel {
+    background: rgba(0, 0, 0, 0.4); /* Dark tint */
+    backdrop-filter: blur(8px);    /* This blurs the image behind the box */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
