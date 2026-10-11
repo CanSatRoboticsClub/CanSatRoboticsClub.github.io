@@ -1,0 +1,35 @@
+---
+interface Props {
+    // Lays the navbar over a full-bleed hero instead of sitting above it.
+    overlay?: boolean;
+    // Keeps the solid navbar pinned to the top while the page scrolls.
+    sticky?: boolean;
+}
+
+const { overlay = false, sticky = false } = Astro.props;
+
+const links = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/#about" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Leadership", href: "/leadership" },
+    { label: "Join Us", href: "/join" },
+];
+---
+
+<nav
+    class:list={[
+        "navbar",
+        { "navbar-overlay": overlay, "navbar-sticky": sticky },
+    ]}
+>
+    <a href="/" class="navbar-brand">CanSat Robotics Club</a>
+
+    <ul class="navbar-links">
+        {links.map((link) => (
+            <li>
+                <a href={link.href}>{link.label}</a>
+            </li>
+        ))}
+    </ul>
+</nav>

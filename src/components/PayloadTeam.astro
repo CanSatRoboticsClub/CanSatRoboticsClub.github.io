@@ -1,0 +1,41 @@
+---
+import type { Leader } from "../data/leaders.ts";
+import type { Member } from "../data/projects.ts";
+
+interface Props {
+    lead: Leader;
+    members: Member[];
+}
+
+const { lead, members } = Astro.props;
+---
+
+<section class="payload-team">
+    <div class="payload-container">
+        <h2 class="team-heading">Meet the Team</h2>
+
+        <div class="team-lead">
+            {lead.photo && (
+                <img
+                    class="team-lead-photo"
+                    src={lead.photo}
+                    alt={lead.name}
+                />
+            )}
+
+            <div class="team-lead-caption">
+                <p class="team-name">{lead.name}</p>
+                <p class="team-role">{lead.position}</p>
+            </div>
+        </div>
+
+        <ul class="team-grid">
+            {members.map((member) => (
+                <li class="team-card">
+                    <p class="team-name">{member.name}</p>
+                    <p class="team-role">{member.major}</p>
+                </li>
+            ))}
+        </ul>
+    </div>
+</section>

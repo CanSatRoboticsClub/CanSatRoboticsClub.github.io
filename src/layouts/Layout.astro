@@ -1,0 +1,37 @@
+---
+import "../styles/global.css"
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+        <link 
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
+            rel="stylesheet" /> 
+        <title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	/* min-height, not height: a fixed 100% height caps body at one screen, which
+	   stops a sticky navbar from staying pinned further down a long page. */
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+</style>

@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/IndexHero.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import { projects } from "../data/projects.ts";
+import SponsorGrid from "../components/SponsorGrid.astro";
+import { sponsors } from "../data/sponsors.ts";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="CanSat Robotics Club">
+    <Navbar overlay />
+
+    <main>
+        <Hero />
+
+        <section class="sponsors-section">
+            <h2>Thank You To Our Sponsors!</h2>
+            <SponsorGrid sponsors={sponsors}/>
+        </section>
+
+        <About />
+
+        <Projects projects={projects}/> 
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    .sponsors-section h2 {
+        font-size: 30px;
+    }
+</style>

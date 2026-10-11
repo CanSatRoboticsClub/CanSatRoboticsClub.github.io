@@ -1,0 +1,189 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import PayloadTeam from "../../components/PayloadTeam.astro";
+import { projects } from "../../data/projects.ts";
+import { leaders } from "../../data/leaders.ts";
+
+export function getStaticPaths() {
+    return projects.map((project) => ({
+        params: {
+            slug: project.slug,
+        },
+        props: {
+            project,
+        },
+    }));
+}
+
+const { project } = Astro.props;
+
+const headlineSpecs = project.specs.filter((spec) => spec.headline);
+
+const otherProjects = projects.filter(
+    (p) => p.slug !== project.slug
+);
+
+const teamLead = leaders.find(
+    (leader) => leader.name === project.team.lead
+)!;
+---
+
+<Layout title={`${project.name} | CanSat Robotics Club`}>
+    <Navbar sticky />
+
+    <main class="payload-page">
+
+        <header class="payload-header">
+            <div class="payload-container">
+                <h1>{project.name}</h1>
+
+                <p class="payload-tagline">
+                   {project.description} 
+                </p>
+
+                <dl class="payload-stats">
+                    {headlineSpecs.map((spec) => (
+                        <div class="payload-stat">
+                            <dd class="payload-stat-value">{spec.value}</dd>
+                            <dt class="payload-stat-label">{spec.label}</dt>
+                        </div>
+                    ))}
+                </dl>
+            </div>
+        </header>
+
+
+        <section class="payload-overview">
+            <div class="payload-prose">
+                {project.overview.map((block) => (
+                    <div class="prose-block">
+                        <h2>{block.heading}</h2>
+                        <p>{block.body}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+
+        <section class="payload-gallery">
+            <div class="payload-container">
+                <h2>Gallery</h2>
+
+                <div class="gallery-grid">
+                    {project.gallery.map((item) => (
+                        <figure class="gallery-item">
+                            <img src={item.image} alt={item.caption} />
+                            <figcaption>{item.caption}</figcaption>
+                        </figure>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+
+        <section class="payload-specs">
+            <div class="payload-container">
+                <h2>General Specifications</h2>
+
+                <dl class="spec-list">
+                    {project.specs.map((spec) => (
+                        <div class="spec-row">
+                            <dt>{spec.label}</dt>
+                            <dd>{spec.value}</dd>
+                        </div>
+                    ))}
+                </dl>
+            </div>
+        </section>
+
+
+        <PayloadTeam
+            lead={teamLead}
+            members={project.team.members}
+        />
+
+        <nav class="payload-crossnav">
+            <div class="payload-container">
+                <h2>Other projects</h2>
+
+                <div class="crossnav-links">
+                    {otherProjects.map((otherProject) => (
+                        <a
+                            href={`/projects/${otherProject.slug}`}
+                            class="crossnav-project"
+                        >
+                            <img
+                                src={otherProject.image}
+                                alt={otherProject.name}
+                            />
+
+                            <div class="crossnav-overlay">
+                                <h3>{otherProject.name}</h3>
+                                <p>Learn more →</p>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    .crossnav-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.crossnav-project {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: white;
+}
+
+.crossnav-project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.crossnav-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        transparent 30%,
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+.crossnav-overlay h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.crossnav-overlay p {
+    margin: 5px 0 0;
+}
+
+.crossnav-project:hover img {
+    transform: scale(1.05);
+}
+</style>

@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+import { leaders } from "../data/leaders";
+---
+
+<Layout title="Leadership | CanSat Robotics Club">
+    <Navbar sticky />
+
+    <main class="payload-page">
+
+        <header class="payload-header">
+            <div class="payload-container">
+                <h1>Leadership</h1>
+            </div>
+        </header>
+
+
+        <section class="leadership-section">
+            <div class="payload-container">
+                <ul class="leader-list">
+                    {leaders.map((leader) => (
+                        <li class="leader">
+                            <img
+                                class="leader-photo"
+                                src={leader.photo}
+                                alt={leader.name}
+                            />
+
+                            <div class="leader-info">
+                                <p class="leader-position">{leader.position}</p>
+                                <p class="leader-name">{leader.name}</p>
+                                <p class="leader-bio">{leader.bio}</p>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <Footer />
+</Layout>

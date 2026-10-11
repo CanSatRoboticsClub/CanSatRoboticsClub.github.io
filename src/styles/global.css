@@ -1,0 +1,1610 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gold: #ae9a62;
+    --primary-tan: #e3d8cc;
+    --primary-blue: #4a76a3;
+
+    --secondary-light-brown: #9b846e;
+    --secondary-dark-brown: #6e5c4b;
+
+    --background: #fff7e3;
+
+    --main-font: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--background);
+
+    font-family: var(--main-font);
+}
+
+.hero-video {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    inset: 0;
+
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary-gold),
+            transparent 
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 100%);
+
+    padding: 6rem 2rem;
+
+    color: white;
+}
+
+.hero h1 {
+    color: var(--primary-tan);
+
+    max-width: 800px;
+
+    margin: 0;
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 800;
+
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.hero h2 {
+    color: var(--primary-tan);
+    
+    max-width: 500px;
+
+    margin: 0;
+    margin-left: 1rem;
+
+    font-size: clamp(1rem, 3vw, 5rem);
+    font-weight: 800;
+}
+
+.hero-description {
+    color: var(--primary-tan);
+
+    max-width: 600px;
+
+    margin: 2rem 0 0;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+}
+ 
+.hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 0.9rem 1.6rem;
+
+    border: 2px solid white;
+
+    border-radius: 10px;
+
+    border-color: var(--primary-tan);
+
+    color: var(--primary-tan);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.hero-button:hover {
+    background: var(--primary-tan);
+    color: black;
+}
+
+/* COMPETITION */
+
+.competition {
+    padding: 4rem 2rem;
+    background: var(--background);
+    color: var(--secondary-dark-brown);
+}
+
+.container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-family: var(--main-font);
+}
+
+.h1 {
+    font-family: var(--main-font);
+    color: var(--primary-gold)
+}
+
+.title-hr {
+    background-color: var(--primary-gold);
+    display: block;
+    width: 40%;
+    height: 3px;
+    border: none;
+    margin: 0 auto;
+}
+
+.competition-grid h1 {
+    font-family: var(--main-font);
+}
+
+.sponsors-section h2 {
+    font-family: var(--main-font);
+}
+
+.container a {
+    font-family: var(--main-font);
+}
+
+.section-intro {
+    margin: 0 auto 5rem;
+    text-align: center;
+}
+
+.comp-text {
+    font-family: var(--main-font);
+    color: var(--secondary-dark-brown);
+}
+
+.eyebrow {
+    margin-bottom: 0.75rem;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--main-font);
+    color: var(--secondary-dark-brown);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    font-family: var(--main-font);
+    color: var(--secondary-dark-brown);
+    margin: 0 auto;
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.about-text {
+    font-family: var(--main-font);
+    color: var(--secondary-dark-brown);
+}
+
+.competition-process {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 8rem;
+}
+
+.process-step {
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 20px;
+}
+
+.process-icon {
+    display: grid;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    place-items: center;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.process-step h3 {
+    margin-bottom: 0.75rem;
+}
+
+.process-step p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.process-line {
+    width: 80px;
+    height: 1px;
+    background: #aaa;
+}
+
+.constraints {
+    padding: 5rem;
+    background: white;
+    font-family: var(--main-font);
+}
+
+.constraints-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.constraints-header h3 {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+}
+
+.constraints-header p {
+    color: #666;
+}
+
+.constraint-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.constraint {
+    padding: 0rem;
+    border-top: 2px solid currentColor;
+}
+
+.constraint h4 {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.constraint p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.competition-footer {
+    padding-top: 4rem;
+    text-align: center;
+}
+
+.competition-footer p {
+    margin-bottom: 1rem;
+}
+
+.competition-footer a {
+    font-weight: 700;
+}
+
+
+
+/* LAUNCH LOCATION */
+
+.launch-location {
+    padding: var(--section-padding) 2rem;
+
+    background: var(--background);
+    color: var(--primary-tan);
+
+    font-family: var(--main-font);
+}
+
+
+.location-container {
+    width: min(var(--content-width), 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.4fr 1.2fr;
+
+    gap: 5rem;
+
+    align-items: center;
+
+    background-color: var(--secondary-light-brown);
+}
+
+.location-info {
+    max-width: 450px;
+    margin-left: 1rem;
+}
+
+
+.location-info h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+
+.location-info h2 span {
+    display: block;
+
+    color: var(--brand-accent);
+}
+
+
+.location-state {
+    margin-top: 1rem;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.location-map {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+/* SPONSORS GRID */
+
+.sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+
+    background: var(--background);
+}
+
+.sponsor {
+    width: 300px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.2s ease;
+}
+
+.sponsor:hover {
+    transform: scale(1.08);
+}
+
+.sponsor img {
+    max-width: 110%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.sponsors-section {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font: var(--main-font);
+    background: var(--background);
+    color: var(--secondary-dark-brown);
+}
+
+/* PROJECTS */
+
+    .projects {
+        width: 100%;
+        padding: 5rem 0;
+
+        font-family: var(--main-font);
+        background: var(--background);
+
+        /* A text block on the right side (the Glider) grows past the page's
+           right edge on hover, which would let the page scroll sideways. Only
+           its empty padding pokes out, so cut it off at the section edge. */
+        overflow-x: clip;
+
+        color: var(--secondary-dark-brown);
+    }
+
+    .projects-heading {
+        text-align: center;
+        padding: 0 20px 3rem;
+    }
+
+    .projects-heading h2 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    /* Rows are as tall as their content, with a little breathing room, rather
+       than a fixed minimum that left large gaps between projects. */
+    .project {
+        display: flex;
+        width: 100%;
+        padding: 2.5rem 0;
+
+        /* Each row is a link; keep it looking like the page, not a link. */
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .project-image,
+    .project-text {
+        width: 50%;
+    }
+
+    /* No overflow clipping: it would cut the images' drop shadows (and the
+       hover enlargement) off in a hard straight line. */
+    .project-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Sized to the object, not the half-width column. Wide images (the glider)
+       stop at max-width; round or tall ones (the hamster ball) stop at
+       max-height, so no single project dwarfs the others. Both limits grow
+       with the window (vw), between a floor and a ceiling. */
+    /* width/height auto: the element shrinks to the drawn picture. With a fixed
+       width, square-ish images (rover, hamster ball) hit the height limit and
+       were drawn narrower than their box, leaving invisible gaps beside them. */
+    .project-image img {
+        width: auto;
+        height: auto;
+        max-width: min(100%, clamp(360px, 36vw, 660px));
+        max-height: clamp(280px, 27vw, 480px);
+
+        /* drop-shadow (unlike box-shadow) follows the object's outline, since
+           the images are transparent, so each project sits on the page rather
+           than floating over it. */
+        filter: drop-shadow(0 18px 20px rgba(97, 79, 79, 0.38));
+
+        transition: transform 0.25s ease;
+    }
+
+    /* Hovering (or keyboard-focusing) anywhere in a row grows its image and
+       its text together, like the sponsor logos but a little more. The image
+       and text each have their own scale(); keep the hover and focus values
+       matching when tuning.
+
+       Hover only applies on devices with a real mouse or trackpad. On phones
+       a tap counts as a hover that never ends, so the row would stay enlarged
+       after going Back, and wide enough to scroll the page sideways. */
+    @media (hover: hover) {
+        .project:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project:hover .project-text {
+            transform: scale(1.1);
+        }
+    }
+
+    .project:focus-visible .project-image img {
+        transform: scale(1.1);
+    }
+
+    .project:focus-visible .project-text {
+        transform: scale(1.1);
+    }
+
+    .project:focus-visible {
+        outline: 3px solid var(--secondary-light-brown);
+        outline-offset: -6px;
+        border-radius: 12px;
+    }
+
+    /* The text block sits in the middle of its half of the row. */
+    .project-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+
+        transition: transform 0.25s ease;
+    }
+
+    /* Every piece of the text block shares one width, so their left edges stay
+       lined up while the block as a whole is centered. */
+    .project-text > * {
+        width: 100%;
+        max-width: 560px;
+    }
+
+    /* Nudges each text block toward the middle of the row: more padding on the
+       outer side than on the side facing the image. The outer padding grows
+       with the window, so mid-size screens don't get squeezed. */
+    .project:not(.image-left) .project-text {
+        padding-left: clamp(2rem, 8vw, 10rem);
+        padding-right: 2rem;
+    }
+
+    .image-left .project-text {
+        padding-left: 2rem;
+        padding-right: clamp(2rem, 8vw, 10rem);
+    }
+
+    /* Hand-tuned: shifts these text blocks toward their images. */
+    .project-rover .project-text {
+        position: relative;
+        left: 75px;
+    }
+
+    .project-hamster-ball .project-text {
+        position: relative;
+        left: 25px;
+    }
+
+    /* Each image is pinned against the middle of the row rather than centered
+       in its half, with the same inner padding in every row. Centering left
+       narrower images (rover, hamster ball) farther from their text than the
+       wide glider; pinning gives every row the same text-to-image gap. */
+    .image-left .project-image {
+        justify-content: flex-end;
+        padding-left: clamp(2rem, 8vw, 10rem);
+        padding-right: clamp(2rem, 4vw, 5rem);
+    }
+
+    .project:not(.image-left) .project-image {
+        justify-content: flex-start;
+        padding-left: clamp(2rem, 4vw, 5rem);
+        padding-right: clamp(2rem, 8vw, 10rem);
+    }
+
+    .project-text h2 {
+        font-size: clamp(2.4rem, 3vw, 3.2rem);
+        margin: 0.5rem 0 1rem;
+    }
+
+    .project-text p {
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
+
+    .project-status {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.7;
+    }
+
+    /* Alternate image/text arrangement */
+    .image-left .project-image {
+        order: 1;
+    }
+
+    .image-left .project-text {
+        order: 2;
+    }
+
+    .image-left .project-image {
+        order: 1;
+    }
+
+    .project:not(.image-left) .project-image {
+        order: 2;
+    }
+
+    .project:not(.image-left) .project-text {
+        order: 1;
+    }
+
+.project-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+}
+
+.project-button {
+    display: inline-block;
+
+    padding: 0.9rem 1.6rem;
+
+    border: 2px solid white;
+
+    border-radius: 10px;
+
+    border-color: var(--secondary-light-brown);
+
+    color: var(--secondary-light-brown);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 1.25rem 2rem;
+
+    /* A shade darker than the Light Brown page headers, so there is a visible
+       edge where the sticky navbar meets them. The homepage navbar overrides
+       this with its own frosted style. */
+    background: var(--secondary-dark-brown);
+
+    font-family: var(--main-font);
+}
+
+/* How dark the pinned navbar is, from 0 (same Light Brown as the page header)
+   to 1 (Dark Brown). Registered so it can be animated. */
+@property --shade {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+/* Solid navbar pinned to the top while the page scrolls. It matches the page
+   header while you are at the top, then darkens as soon as you scroll, so
+   there is a visible edge while the header slides underneath it. */
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+
+    /* Fallback for browsers without scroll-driven animations: stays dark. */
+    --shade: 1;
+
+    background: color-mix(
+        in srgb,
+        var(--secondary-dark-brown) calc(var(--shade) * 100%),
+        var(--secondary-light-brown)
+    );
+}
+
+/* Individual properties on purpose: see the homepage navbar note below. */
+@supports (animation-timeline: scroll()) {
+    .navbar-sticky {
+        animation-name: navbar-shade;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll(root);
+        animation-range: 0 4rem;
+    }
+}
+
+@keyframes navbar-shade {
+    from {
+        --shade: 0;
+    }
+
+    to {
+        --shade: 1;
+    }
+}
+
+/* How frosted the homepage navbar is, from 0 (clear) to 1 (fully frosted).
+   Registered so it can be animated; the tint and blur are both worked out
+   from it below. */
+@property --frost {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+/* Homepage only: fixed over the hero video. At the top of the page the video
+   shows through, with a soft navy scrim keeping the links legible. As the page
+   scrolls, the bar frosts over (blur + Light Brown tint) so it stays readable
+   once it is over the lighter sections below the video. */
+.navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 10;
+
+    /* Fallback for browsers without scroll-driven animations: fully frosted
+       the whole time. Where supported, the animation below overrides this. */
+    --frost: 1;
+
+    background-image: linear-gradient(
+        180deg,
+        rgba(6, 42, 78, 0.45),
+        transparent
+    );
+
+    /* 0.85 = tint strength when fully frosted; 12px = blur when fully frosted. */
+    background-color: rgba(155, 132, 110, calc(var(--frost) * 0.85));
+    backdrop-filter: blur(calc(var(--frost) * 12px));
+}
+
+/* Where supported, the frost follows scroll position: clear at the top, fully
+   frosted by the time most of the video has scrolled away. */
+@supports (animation-timeline: scroll()) {
+    /* Written as individual properties on purpose: `animation-timeline` cannot
+       go inside the `animation` shorthand, and combining them breaks the effect. */
+    .navbar-overlay {
+        animation-name: navbar-frost;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll(root);
+        animation-range: 0 70vh;
+    }
+}
+
+/* Animates the --frost number rather than the colors directly. Chrome keeps
+   drawing a stale frame when a scroll-linked background-color animation runs
+   backwards after finishing; a custom property is redrawn correctly. */
+@keyframes navbar-frost {
+    from {
+        --frost: 0;
+    }
+
+    to {
+        --frost: 1;
+    }
+}
+
+.navbar-brand {
+    color: var(--primary-tan);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navbar-links a {
+    color: var(--primary-tan);
+
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+    color: var(--background);
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: var(--secondary-light-brown);
+    color: var(--primary-tan);
+
+    font-family: var(--main-font);
+}
+
+.footer-content {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 3rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 3rem;
+}
+
+.footer-brand h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-brand p {
+    margin: 0 0 0.3rem;
+    font-size: 0.95rem;
+}
+
+.footer-contact h4 {
+    margin: 0 0 0.75rem;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.footer-contact a {
+    display: flex;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    margin-bottom: 0.6rem;
+
+    color: var(--primary-tan);
+
+    font-size: 0.95rem;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--background);
+}
+
+/* Inline SVG, so the icons take their color from the link and stay on palette. */
+.footer-icon {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+.footer-bottom {
+    padding: 1.25rem 2rem;
+
+    border-top: 1px solid rgba(227, 216, 204, 0.25);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+
+/* LEADERSHIP */
+
+.leadership-section {
+    background: var(--background);
+}
+
+.leader-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 3.5rem 3rem;
+}
+
+/* Photo left, text right. Stacks on narrow screens via the mobile block. */
+.leader {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+
+    gap: 1.5rem;
+
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--secondary-light-brown);
+}
+
+.leader-photo {
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;
+
+    /* Light Brown at 55%: darker than the off-white behind it, lighter than
+       the solid brown of the header and footer. */
+    border: 3px solid rgba(146, 127, 109, 0.551);
+    border-radius: 4px;
+}
+
+.leader-position {
+    margin: 0 0 0.35rem;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.leader-name {
+    margin: 0 0 0.75rem;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.leader-bio {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* JOIN */
+
+.join-section {
+    background: var(--background);
+}
+
+.join-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 4rem;
+
+    align-items: start;
+}
+
+.join-field {
+    margin-bottom: 2rem;
+}
+
+.join-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.join-optional {
+    margin-left: 0.5rem;
+
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    opacity: 0.6;
+}
+
+.join-field input,
+.join-field select,
+.join-field textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+
+    border: 2px solid rgba(155, 132, 110, 0.55);
+    border-radius: 4px;
+
+    background: white;
+
+    color: inherit;
+    font-family: var(--main-font);
+    font-size: 1rem;
+
+    transition: border-color 0.2s ease;
+}
+
+.join-field input:focus,
+.join-field select:focus,
+.join-field textarea:focus {
+    outline: none;
+    border-color: var(--secondary-light-brown);
+}
+
+.join-field textarea {
+    resize: vertical;
+}
+
+/* Hidden from people, reachable by bots. A filled value means a spam submit. */
+.join-botcheck {
+    position: absolute;
+    left: -9999px;
+}
+
+.join-submit {
+    padding: 0.9rem 2.5rem;
+
+    border: 2px solid var(--secondary-light-brown);
+    border-radius: 10px;
+
+    background: var(--secondary-light-brown);
+    color: var(--primary-tan);
+
+    font-family: var(--main-font);
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.join-submit:hover {
+    background: transparent;
+    color: var(--secondary-light-brown);
+}
+
+.join-aside {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--secondary-light-brown);
+}
+
+.join-aside h2 {
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+}
+
+.join-aside p {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* PAGE PLACEHOLDER */
+
+.page-placeholder {
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 6rem 2rem;
+
+    background: var(--background);
+
+    font-family: var(--main-font);
+    text-align: center;
+}
+
+.page-placeholder h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+
+/* PAYLOAD PAGE */
+
+.payload-page {
+    font-family: var(--main-font);
+    color: var(--secondary-dark-brown);
+}
+
+.payload-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+/* Body copy sits narrower than .payload-container so lines stay readable. */
+.payload-prose {
+    width: min(700px, 100%);
+    margin: 0 auto;
+}
+
+/* Direct children only, so nested elements don't inherit section padding.
+   The header is excluded: it sets its own padding below. */
+.payload-page > section,
+.payload-page > nav {
+    padding: 5rem 2rem;
+}
+
+.payload-page h2 {
+    font-size: 2rem;
+    margin: 0 0 1.5rem;
+}
+
+
+/* Less padding on top than other sections, since the navbar already supplies
+   space above it. Declared in full so nothing has to override anything. */
+.payload-header {
+    padding: 1.5rem 2rem 4rem;
+
+    background: var(--secondary-light-brown);
+    color: var(--primary-tan);
+}
+
+.payload-header h1 {
+    margin: 0;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.payload-tagline {
+    max-width: 600px;
+    margin: 1.5rem 0 0;
+
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Headline specs, filling the header's lower band. */
+.payload-stats {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 3.5rem;
+
+    margin: 3rem 0 0;
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(227, 216, 204, 0.3);
+}
+
+.payload-stat-value {
+    margin: 0;
+
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.payload-stat-label {
+    margin-top: 0.5rem;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+.payload-overview {
+    background: var(--background);
+}
+
+.prose-block:not(:first-child) {
+    margin-top: 3rem;
+}
+
+.payload-prose h2 {
+    margin: 0 0 1rem;
+}
+
+.payload-prose p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+.payload-gallery {
+    background: var(--primary-tan);
+}
+
+/* auto-fit: column count follows the available width, so adding or removing
+   images needs no CSS change and no separate mobile rule. */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    margin: 0;
+}
+
+/* cover fills each tile edge to edge, cropping rather than letterboxing.
+   Suits photographs and renders; switch to contain for transparent cutouts. */
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    background: var(--background);
+}
+
+.gallery-item figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+
+
+.payload-specs {
+    background: var(--background);
+}
+
+.spec-list {
+    margin: 0;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 0.9rem 0;
+
+    border-bottom: 1px solid var(--secondary-light-brown);
+}
+
+.spec-row dt {
+    font-weight: 700;
+}
+
+.spec-row dd {
+    margin: 0;
+    text-align: right;
+}
+
+
+.payload-team {
+    background: var(--primary-tan);
+}
+
+/* Centered so the heading, the lead block and its rule share one axis.
+   Scoped under .payload-page to outrank the shared `.payload-page h2` margin. */
+.payload-page .team-heading {
+    margin: -1.5rem 0 2rem;
+
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+/* Lead sits centered on its own row above the members, set apart by a wider
+   rule and a larger name. Everyone otherwise shares one name/role treatment. */
+.team-lead {
+    max-width: 320px;
+    margin: 0 auto 4rem;
+
+    text-align: center;
+}
+
+/* Same border as the leadership page photos, larger since it stands alone. */
+.team-lead-photo {
+    display: block;
+
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.25rem;
+
+    object-fit: cover;
+
+    border: 3px solid rgba(146, 127, 109, 0.551);
+    border-radius: 4px;
+}
+
+/* The rule sits on the caption, so it falls between photo and name. */
+.team-lead-caption {
+    padding-top: 1rem;
+    border-top: 3px solid var(--secondary-light-brown);
+}
+
+.team-lead .team-name {
+    font-size: 1.6rem;
+}
+
+.team-grid {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2.5rem 2rem;
+}
+
+.team-card {
+    padding-top: 1rem;
+    border-top: 1px solid var(--secondary-light-brown);
+}
+
+.team-name {
+    margin: 0 0 0.35rem;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.team-role {
+    margin: 0;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+
+.payload-crossnav {
+    background: var(--background);
+}
+
+.crossnav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.crossnav-links a {
+    color: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    background-color: var(--background);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-title {
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-size: 64px;
+    font-family: var(--main-font);
+    color: var(--secondary-dark-brown);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .payload-page > section,
+    .payload-page > nav {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .payload-header {
+        padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    .payload-stats {
+        gap: 2rem;
+    }
+
+    .join-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .leader-list {
+        grid-template-columns: 1fr;
+    }
+
+    .leader {
+        grid-template-columns: 110px 1fr;
+        gap: 1.25rem;
+    }
+
+    .leader-photo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .spec-row {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .spec-row dd {
+        text-align: left;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 1rem;
+
+        padding: 1.25rem 1.5rem;
+    }
+
+    /* The two-row mobile navbar would cover too much of a small screen if it
+       stayed pinned, so on phones it scrolls away with the page. */
+    .navbar-overlay {
+        position: absolute;
+    }
+
+    /* Same reasoning for the solid pinned navbar on phones. */
+    .navbar-sticky {
+        position: static;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 2rem;
+
+        padding: 2.5rem 1.5rem;
+    }
+
+    .competition {
+        padding: 5rem 1.5rem;
+    }
+
+    .competition-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .competition-process {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .process-line {
+        width: 1px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .constraints {
+        padding: 3rem 1.5rem;
+    }
+
+    .constraint-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        padding: 5rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        max-width: 300px;
+    }
+
+    .hero-button {
+        text-align: center;
+    }
+
+    .launch-location {
+        padding: 5rem 1.5rem;
+    }
+
+    .location-container {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+    .location-info {
+        max-width: none;
+    }
+
+    .projects-heading h2 {
+            font-size: 2.2rem;
+        }
+
+        .project {
+            flex-direction: column;
+        }
+
+        .project-image,
+        .project-text {
+            width: 100%;
+        }
+
+        .project-image {
+            height: 350px;
+        }
+
+        /* Matches the desktop nudge selectors so it can override them: on
+           stacked phone rows, text and images are even on both sides. */
+        .project-text,
+        .project:not(.image-left) .project-text,
+        .image-left .project-text {
+            padding: 3rem 2rem;
+        }
+
+        .project:not(.image-left) .project-image,
+        .image-left .project-image {
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        /* Rows stack on phones, so the desktop shifts would push this text
+           off the right edge of the screen. */
+        .project-rover .project-text,
+        .project-hamster-ball .project-text {
+            left: 0;
+        }
+
+        .project-image,
+        .project-text,
+        .image-left .project-image,
+        .image-left .project-text,
+        .project:not(.image-left) .project-image,
+        .project:not(.image-left) .project-text {
+            order: initial;
+        }
+}

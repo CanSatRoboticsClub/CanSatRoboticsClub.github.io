@@ -1,0 +1,25 @@
+---
+import type { Sponsor } from "../data/sponsors";
+
+interface Props {
+    sponsors: Sponsor[];
+}
+
+const { sponsors } = Astro.props;
+---
+<div class="sponsor-grid">
+    {sponsors.map((sponsor) => (
+        <a
+            class="sponsor"
+            href={sponsor.url}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src={sponsor.logo}
+                alt={sponsor.name}
+                style={`width: ${sponsor.width ?? "110%"}; height: auto;`}
+            />
+        </a>
+    ))}
+</div>
