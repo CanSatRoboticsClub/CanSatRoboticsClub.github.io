@@ -438,7 +438,7 @@ html {
     width: 100%;
     padding: 10px;
     text-align: center;
-    font: var(--main-font);
+    font-family: var(--main-font);
     background: var(--background);
     color: var(--secondary-dark-brown);
 }
@@ -1560,51 +1560,11 @@ html {
     .location-info {
         max-width: none;
     }
+    
+    .section-title { font-size: clamp(2.25rem, 10vw, 4rem); margin-top: 40px; }
 
-    .projects-heading h2 {
-            font-size: 2.2rem;
-        }
+    .hero h2 { font-size: 1.5rem; min-height: 80svh;}
 
-        .project {
-            flex-direction: column;
-        }
-
-        .project-image,
-        .project-text {
-            width: 100%;
-        }
-
-        .project-image {
-            height: 350px;
-        }
-
-        /* Matches the desktop nudge selectors so it can override them: on
-           stacked phone rows, text and images are even on both sides. */
-        .project-text,
-        .project:not(.image-left) .project-text,
-        .image-left .project-text {
-            padding: 3rem 2rem;
-        }
-
-        .project:not(.image-left) .project-image,
-        .image-left .project-image {
-            justify-content: center;
-            padding: 0 2rem;
-        }
-
-        /* Rows stack on phones, so the desktop shifts would push this text
-           off the right edge of the screen. */
-        .project-rover .project-text,
-        .project-hamster-ball .project-text {
-            left: 0;
-        }
-
-        .project-image,
-        .project-text,
-        .image-left .project-image,
-        .image-left .project-text,
-        .project:not(.image-left) .project-image,
-        .project:not(.image-left) .project-text {
-            order: initial;
-        }
+    .sponsor-grid { gap: 24px; }
+    .sponsor { width: 140px; height: 90px; }
 }

@@ -28,7 +28,7 @@
 
 <style>
     .eyebrow {
-        margin-top: 40;
+        margin-top: 40px;
         margin-bottom: auto;
     }
 
@@ -53,7 +53,7 @@
     }
 
     .comp-text {
-        margin-top: 10;
+        margin-top: 10px;
         font-size: 24px;
     }
 
@@ -109,5 +109,14 @@
 
     .aas {
         background-image: url('/assets/images/aas-comp-photo.png');
+    }
+
+    @media (max-width: 700px) {
+        .competition-grid { grid-template-columns: 1fr; }
+        .competition-link { height: 220px; padding: 20px; }
+        .competition-grid h1 { font-size: 1.6rem; }
+        .about-intro { max-width: 100%; }
+        .about-text { font-size: 1.25rem; line-height: 1.5; }
+        .comp-text { font-size: 1.1rem; }
     }
 </style>
