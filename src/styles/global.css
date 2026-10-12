@@ -1466,26 +1466,17 @@ html {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-
-        gap: 1rem;
-
-        padding: 1.25rem 1.5rem;
-    }
-
-    /* The two-row mobile navbar would cover too much of a small screen if it
-       stayed pinned, so on phones it scrolls away with the page. */
-    .navbar-overlay {
-        position: absolute;
-    }
-
-    /* Same reasoning for the solid pinned navbar on phones. */
-    .navbar-sticky {
-        position: static;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
     }
 
     .navbar-links {
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.25rem 1rem;
+    }
+
+    .navbar-links a {
+        font-size: 0.9rem;
     }
 
     .footer-content {
