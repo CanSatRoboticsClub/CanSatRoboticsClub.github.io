@@ -94,7 +94,7 @@ export const projects = [
             },
         ],
         gallery: [
-            {image: "/assets/images/robot_placeholder.png", caption: "placeholder" },
+            {image: "/assets/images/glider-cover.png", caption: "placeholder" },
         ],
         team: {
             lead: "Luke Ricketts",
