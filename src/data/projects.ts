@@ -77,7 +77,7 @@ export const projects = [
     {
         name: "Glider Team",
         slug: "glider",
-        image: "/assets/images/glider-cover.png",
+        image: "/assets/images/glider/glider-cover.png",
         description:
             "An autonomous glider designed to reach the target on landing.",
         specs: [
