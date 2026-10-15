@@ -37,7 +37,7 @@ export const projects = [
     {
         name: "Rover Team",
         slug: "rover",
-        image: "/assets/images/rover-cover.png",
+        image: "/assets/images/rover/rover-cover.webp",
         description:
             "A two-wheel autonomous rover designed for reliable navigation after landing.",
         specs: [
@@ -59,7 +59,9 @@ export const projects = [
             },
         ],
         gallery : [
-            { image: "/assets/images/robot_placeholder.png", caption: "placeholder" }
+            { image: "/assets/images/rover/rover-1.webp", caption: "CAD" },
+            { image: "/assets/images/rover/rover-2.webp", caption: "Rover isometric"},
+            { image: "/assets/images/rover/rover-3.webp", caption: "Rover top down"}
         ],
         team : {
             lead: "Luca Baldelli",
@@ -94,7 +96,10 @@ export const projects = [
             },
         ],
         gallery: [
-            {image: "/assets/images/glider-cover.png", caption: "placeholder" },
+            { image: "/assets/images/glider/glider-1.webp", caption: "Wing Servo" },
+            { image: "/assets/images/glider/glider-2.webp", caption: "Glider Wing Folded top down"},
+            { image: "/assets/images/glider/glider-3.webp", caption: "Folded Wing CAD"},
+            { image: "/assets/images/glider/glider-4.webp", caption: "Un-folded Wing CAD"}
         ],
         team: {
             lead: "Luke Ricketts",
