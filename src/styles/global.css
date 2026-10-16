@@ -20,6 +20,14 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+    
+    background: var(--secondary-light-brown); 
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    background: transparent;
 }
 
 /* HERO */

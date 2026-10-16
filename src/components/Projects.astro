@@ -31,12 +31,10 @@ import { projects } from "../data/projects.ts";
                 <div class="project-text">
                     <h2>{project.name}</h2>
                     <p>{project.description}</p>
+                    <p class="eyebrow">COMPETITION: {project.competition}</p>
 
-                    <!-- Looks like a button, but is a plain label: the whole row
-                         is already the link, and links can't contain links. -->
-                    <div class="project-buttons">
-                        <span class="project-button">Learn More</span>
-                    </div>
+                    <!-- Mobile-only hint: the whole row is the link, so this just tells people to tap. -->
+                    <p class="tap-hint">Tap the image to learn more</p>
                 </div>
             </a>
         ))}
@@ -48,7 +46,26 @@ import { projects } from "../data/projects.ts";
         width: 45%;
     }
 
+    .project-text p {
+        margin: 0.15rem 0.1 0.15rem; /* top, sides, bottom */
+    }
+
+    .eyebrow {
+        font-size: 14px;
+    }
+
+    .tap-hint {
+        display: none;
+        font-size: 0.85rem;
+        font-style: italic;
+        opacity: 0.8;
+    }
+
     @media (max-width: 700px) {
+        .tap-hint {
+            display: block;
+        }
+
         .project {
             flex-direction: column;
         }

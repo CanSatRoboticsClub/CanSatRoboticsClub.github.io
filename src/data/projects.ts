@@ -24,6 +24,7 @@ export interface Project {
     slug: string;
     image: string;
     description: string;
+    competition: string;
     specs: Spec[];
     overview: {
         heading: string;
@@ -40,6 +41,7 @@ export const projects = [
         image: "/assets/images/rover/rover-cover.webp",
         description:
             "A two-wheel autonomous rover designed for reliable navigation after landing.",
+        competition: "ARLISS",
         specs: [
             {label: "Mass", value: "820 g", headline: true},
             {label: "Chassis size (L × W × H)", value: "13 × 6 × 4 cm" },
@@ -80,6 +82,7 @@ export const projects = [
         image: "/assets/images/glider/glider-cover.png",
         description:
             "An autonomous glider designed to reach the target on landing.",
+        competition: "ARLISS",
         specs: [
             { label: "Mass", value: "250 g", headline: true },
             { label: "Wingspan", value: "66 cm", headline: true },
