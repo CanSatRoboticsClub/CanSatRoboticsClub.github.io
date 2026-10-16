@@ -42,6 +42,9 @@ const teamLead = leaders.find(
                 <p class="payload-tagline">
                    {project.description} 
                 </p>
+                <p class="eyebrow">
+                    COMPETITION: {project.competition}
+                </p>
 
                 <dl class="payload-stats">
                     {headlineSpecs.map((spec) => (
@@ -134,7 +137,12 @@ const teamLead = leaders.find(
 </Layout>
 
 <style>
-    .crossnav-links {
+.eyebrow {
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crossnav-links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
