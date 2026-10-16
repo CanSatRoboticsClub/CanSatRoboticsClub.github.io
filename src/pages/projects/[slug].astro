@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import PayloadTeam from "../../components/PayloadTeam.astro";
 import { projects } from "../../data/projects.ts";
 import { leaders } from "../../data/leaders.ts";
+import "../../styles/global.css";
 
 export function getStaticPaths() {
     return projects.map((project) => ({
@@ -139,7 +140,7 @@ const teamLead = leaders.find(
 <style>
 .eyebrow {
     font-size: 18px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--primary-tan);
 }
 
 .crossnav-links {
