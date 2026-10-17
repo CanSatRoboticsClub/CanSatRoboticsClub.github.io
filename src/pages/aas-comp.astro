@@ -2,13 +2,217 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/global.css"
 ---
 
 <Layout title="AAS CanSat Competition | CanSat Robotics Club">
     <Navbar sticky />
-    <main>
-        <h1>This page is coming soon!</h1>
-        <p>We're working very hard.</p>
-    </main>
+    <main class="payload-page">
+        <header class="payload-header">
+            <div class="payload-container">
+                <h1>AAS CanSat Competition</h1>
+            </div>
+        </header>
+
+        <section class="competition" id="arliss-comp">
+            <div class="comp-intro">
+                <h1 class="section-title">CanSat Deployment Competition</h1>
+                <hr class="title-hr title-hr-1">
+
+                <p class="comp-text">
+                    This competition invites students from all around the world to design, build, and launch
+                    a two-part satellite: a container that carries a PocketQube satellite and releases it mid-descent.
+                </p>
+                <p class="comp-text">
+                    After launch both satellites must communicate with a ground station and preform various
+                    tasks before landing.
+                </p>
+            </div>
+            <div class="arliss-contraints">
+                <h1>The Few Design Requirements</h1>
+                <hr class="title-hr title-hr-2"/>
+
+                <div class="constraint-grid">
+                    <div class="constraint">
+                        <h4>Size</h4>
+                        <p>Stay within the competition's size requirements.</p>
+                    </div>
+
+                    <div class="constraint">
+                        <h4>Weight</h4>
+                        <p>Keep the complete robot within the weight limit.</p>
+                    </div>
+
+                    <div class="constraint">
+                        <h4>Descent Speed</h4>
+                        <p>Safely control how quickly the robot reaches the ground.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="launch-location">
+            <div class="location-container">
+                <div class="location-info">
+                    <p class="eyebrow">WHERE WE LAUNCH</p>
+
+                    <h2>
+                        Monterey
+                    </h2>
+
+                    <p class="location-state">
+                        Virginia, USA
+                    </p>
+                </div>
+
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&center=38.4126,-79.5811&zoom=12&maptype=satellite"
+                        width="100%" height="450"
+                        style="border:0; display:block;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="comp-link">
+                <h1><a
+                    href="https://cansatcompetition.com/mission.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hero-button"
+                >
+                    View The Official Regulations
+                </a></h1>
+                <hr class="title-hr title-hr-3"/>
+                <h1><a
+                    href="https://www.albaorbital.com/pocketqube-standard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hero-button"
+                >
+                    View The PocketQube Standard
+                </a></h1>
+                <hr class="title-hr title-hr-4"/>
+            </div>
+        </section>
+     </main>
     <Footer />
 </Layout>
+
+<style>
+    .payload-header {
+        background:
+            linear-gradient(rgba(110, 92, 75, 0.55), rgba(110, 92, 75, 0.55)),
+            url("/assets/images/comp-photos/aas-cover.webp") center / cover no-repeat;
+        min-height: 450px; /* optional: gives the image room to show */
+        display: flex;
+        align-items: flex-end; /* optional: sits the title at the bottom */
+    }
+
+    .title-hr-1 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .title-hr-2 {
+        width: 60%;
+    }
+    
+    .title-hr-3 {
+        width: 50%;
+    }
+
+    .title-hr-4 {
+        width: 55%;
+    }
+
+    .comp-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        padding-top: 7rem;
+        padding-bottom: 15rem;
+        
+        font-size: 1.5rem;
+        font-family: var(--main-font);
+    }
+
+    .comp-link h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    a, a:visited {
+        color: var(--primary-blue);
+        text-decoration: none;
+    }
+
+    .comp-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        margin: 0 auto;
+
+        max-width: 70%;
+    }
+
+    .comp-text {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        font-size: 28px;
+        line-height: 48px;
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+    }
+
+    .arliss-contraints {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        margin: 0 auto;
+
+        max-width: 80%; 
+    }
+
+    .arliss-contraints h1 {
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+        font-size: 40px;
+    } 
+
+    .constraint-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .constraint {
+        margin-top: 5rem;
+        padding-top: 0rem;
+        border-top: 2px solid currentColor;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+    }
+
+    .constraint h4 {
+        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
+    }
+
+    .constraint p {
+        margin: 0;
+        color: var(--secondary-dark-brown);
+        line-height: 1.6;
+        font-size: 18px;
+    }
+</style>
